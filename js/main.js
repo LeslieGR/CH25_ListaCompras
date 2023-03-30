@@ -131,6 +131,15 @@ txtNombre.addEventListener("blur", function(event){        //evento blur: perder
 });// txtNombre.blur
 
 window.addEventListener("load", function(event){
+    if(localStorage.getItem("contadorProductos")== null){
+       localStorage.getItem("contadorProductos", "0");
+    }// if
+    if(localStorage.getItem("totalEnProductos")== null){
+        localStorage.getItem("totalEnProductos", "0");
+    }// if
+    if(localStorage.getItem("costoTotal")== null){
+        localStorage.getItem("costoTotal", "0.0");
+    }// if
     contador = parseInt(localStorage.getItem("contadorProductos")); 
     totalEnProductos = parseInt(localStorage.getItem("totalEnProductos"));
     costoTotal = parseFloat (localStorage.getItem("costoTotal")); 
